@@ -6,76 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 3px;
-            transition: background-color 0.3s ease;
-        }
-        nav ul li a:hover {
-            background-color: #555;
-        }
-        main {
-            text-align: center;
-            margin-top: 20px;
-        }
-        section {
-            margin-bottom: 40px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        article {
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-        }
-        footer p {
-            margin: 0;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        img:hover {
-            transform: scale(1.1);
-        }
+        /* CSS Anda */
     </style>
+    <script>
+        // Fungsi untuk menambahkan animasi ke header
+        function animateHeader() {
+            var header = document.querySelector('header h1');
+            header.style.transition = 'opacity 0.3s ease';
+            header.addEventListener('mouseenter', function() {
+                this.style.opacity = '0.7';
+            });
+            header.addEventListener('mouseleave', function() {
+                this.style.opacity = '1';
+            });
+        }
+
+        // Fungsi untuk menambahkan animasi ke judul artikel di blog
+        function animateArticleTitles() {
+            var articleTitles = document.querySelectorAll('#blog article h3');
+            articleTitles.forEach(function(title) {
+                title.style.transition = 'opacity 0.3s ease';
+                title.addEventListener('mouseenter', function() {
+                    this.style.opacity = '0.7';
+                });
+                title.addEventListener('mouseleave', function() {
+                    this.style.opacity = '1';
+                });
+            });
+        }
+
+        // Panggil fungsi animasi setelah dokumen dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            animateHeader();
+            animateArticleTitles();
+        });
+    </script>
 </head>
 <body>
     <header>
