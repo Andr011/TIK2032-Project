@@ -11,12 +11,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9; /* Warna latar belakang yang lebih lembut */
-            color: #333; /* Warna teks yang lebih gelap */
+            background-color: #f4f4f4;
         }
 
         header {
-            background-color: #333; /* Warna latar belakang header yang lebih gelap */
+            background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -24,9 +23,14 @@
         }
 
         header h1 {
-            margin: 0; /* Hapus margin atas dan bawah untuk header h1 */
-            padding-bottom: 10px; /* Tambahkan padding bawah ke header h1 */
-            border-bottom: 1px solid #fff; /* Tambahkan garis bawah ke header h1 */
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #fff;
+            transition: transform 0.3s ease; /* Animasi zoom in dan zoom out */
+        }
+
+        header h1:hover {
+            transform: scale(1.1); /* Zoom in saat cursor di atas */
         }
 
         nav ul {
@@ -59,18 +63,30 @@
 
         section {
             margin-bottom: 40px;
-            background-color: #fff; /* Warna latar belakang section yang lebih putih */
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        article {
-            margin-bottom: 20px;
+        section h2 {
+            transition: transform 0.3s ease; /* Animasi zoom in dan zoom out */
+        }
+
+        section h2:hover {
+            transform: scale(1.1); /* Zoom in saat cursor di atas */
+        }
+
+        article h3 {
+            transition: transform 0.3s ease; /* Animasi zoom in dan zoom out */
+        }
+
+        article h3:hover {
+            transform: scale(1.1); /* Zoom in saat cursor di atas */
         }
 
         footer {
-            background-color: #333; /* Warna latar belakang footer yang lebih gelap */
+            background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -99,7 +115,7 @@
 </head>
 <body>
     <header>
-        <h1 id="headerText">Welcome to My Website</h1>
+        <h1>Welcome to My Website</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -120,21 +136,18 @@
 
         <section id="blog">
             <h2>Blog</h2>
-           <article>
-    <h3>Teknologi: Perkembangan Terbaru dalam Dunia Teknologi</h3>
-    <p>Teknologi terus berkembang pesat dan memiliki dampak besar dalam kehidupan kita sehari-hari. Artikel ini membahas beberapa perkembangan terbaru dalam dunia teknologi, seperti kecerdasan buatan, kendaraan otonom, dan Internet of Things. Teknologi kecerdasan buatan (AI) telah menjadi bagian integral dari banyak aspek kehidupan kita. Dari asisten virtual hingga mobil otonom, AI terus memperluas pengaruhnya. Sementara itu, kendaraan otonom semakin mendekati kenyataan, dengan perusahaan-perusahaan besar seperti Tesla dan Google terus mengembangkan teknologi ini. Internet of Things (IoT) juga mengubah cara kita berinteraksi dengan dunia sekitar kita, dengan rumah pintar, kota pintar, dan perangkat lainnya yang terhubung secara online.</p>
-</article>
-
-<article>
-    <h3>Sejarah Kemerdekaan Indonesia: Perjuangan Menuju Kemerdekaan</h3>
-    <p>Sejarah kemerdekaan Indonesia merupakan perjalanan panjang dan penuh perjuangan. Artikel ini mengupas tentang peristiwa-peristiwa penting dalam perjuangan menuju kemerdekaan Indonesia, termasuk proklamasi kemerdekaan pada tanggal 17 Agustus 1945. Perjuangan kemerdekaan Indonesia tidaklah mudah. Dari penjajahan Belanda yang panjang hingga perjuangan para pahlawan nasional seperti Soekarno dan Hatta, setiap langkah menuju kemerdekaan dipenuhi dengan pengorbanan dan perjuangan. Artikel ini menghormati dan mengenang perjuangan para pahlawan yang telah berjuang keras untuk memperoleh kemerdekaan bagi bangsa Indonesia.</p>
-</article>
-
-<article>
-    <h3>Musik: Pengaruh Musik dalam Kehidupan Manusia</h3>
-    <p>Musik memiliki peran yang penting dalam kehidupan manusia. Artikel ini membahas tentang pengaruh musik dalam berbagai aspek kehidupan, mulai dari pengaruhnya terhadap suasana hati hingga peran musik dalam industri hiburan. Musik telah dikenal memiliki kekuatan untuk mempengaruhi suasana hati dan emosi. Dari musik klasik yang menenangkan hingga musik rock yang energik, setiap genre memiliki dampaknya sendiri pada pendengarnya. Selain itu, musik juga memainkan peran penting dalam industri hiburan, dengan konser, festival musik, dan penjualan rekaman yang menjadi bagian integral dari budaya populer.</p>
-</article>
-
+            <article>
+                <h3>Teknologi: Perkembangan Terbaru dalam Dunia Teknologi</h3>
+                <p>Teknologi terus berkembang pesat dan memiliki dampak besar dalam kehidupan kita sehari-hari. Artikel ini membahas beberapa perkembangan terbaru dalam dunia teknologi, seperti kecerdasan buatan, kendaraan otonom, dan Internet of Things. Teknologi kecerdasan buatan (AI) telah menjadi bagian integral dari banyak aspek kehidupan kita. Dari asisten virtual hingga mobil otonom, AI terus memperluas pengaruhnya. Sementara itu, kendaraan otonom semakin mendekati kenyataan, dengan perusahaan-perusahaan besar seperti Tesla dan Google terus mengembangkan teknologi ini. Internet of Things (IoT) juga mengubah cara kita berinteraksi dengan dunia sekitar kita, dengan rumah pintar, kota pintar, dan perangkat lainnya yang terhubung secara online.</p>
+            </article>
+            <article>
+                <h3>Sejarah Kemerdekaan Indonesia: Perjuangan Menuju Kemerdekaan</h3>
+                <p>Sejarah kemerdekaan Indonesia merupakan perjalanan panjang dan penuh perjuangan. Artikel ini mengupas tentang peristiwa-peristiwa penting dalam perjuangan menuju kemerdekaan Indonesia, termasuk proklamasi kemerdekaan pada tanggal 17 Agustus 1945. Perjuangan kemerdekaan Indonesia tidaklah mudah. Dari penjajahan Belanda yang panjang hingga perjuangan para pahlawan nasional seperti Soekarno dan Hatta, setiap langkah menuju kemerdekaan dipenuhi dengan pengorbanan dan perjuangan. Artikel ini menghormati dan mengenang perjuangan para pahlawan yang telah berjuang keras untuk memperoleh kemerdekaan bagi bangsa Indonesia.</p>
+            </article>
+            <article>
+                <h3>Musik: Pengaruh Musik dalam Kehidupan Manusia</h3>
+                <p>Musik memiliki peran yang penting dalam kehidupan manusia. Artikel ini membahas tentang pengaruh musik dalam berbagai aspek kehidupan, mulai dari pengaruhnya terhadap suasana hati hingga peran musik dalam industri hiburan. Musik telah dikenal memiliki kekuatan untuk mempengaruhi suasana hati dan emosi. Dari musik klasik yang menenangkan hingga musik rock yang energik, setiap genre memiliki dampaknya sendiri pada pendengarnya. Selain itu, musik juga memainkan peran penting dalam industri hiburan, dengan konser, festival musik, dan penjualan rekaman yang menjadi bagian integral dari budaya populer.</p>
+            </article>
         </section>
 
         <section id="gallery">
@@ -162,11 +175,35 @@
         const headerText = document.getElementById('headerText');
 
         headerText.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)'; // Menggeser teks ke atas
+            this.style.transform = 'translateY(-5px)';
         });
 
         headerText.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)'; // Mengembalikan teks ke posisi semula
+            this.style.transform = 'translateY(0)';
+        });
+
+        const sectionHeadings = document.querySelectorAll('section h2');
+
+        sectionHeadings.forEach(heading => {
+            heading.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+            });
+
+            heading.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        const articleTitles = document.querySelectorAll('article h3');
+
+        articleTitles.forEach(title => {
+            title.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+            });
+
+            title.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
         });
     </script>
 </body>
