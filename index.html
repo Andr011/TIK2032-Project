@@ -10,15 +10,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            background-image: url('background.jpg'); /* Ganti 'background.jpg' dengan nama dan path file gambar latar belakang Anda */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #f7f7f7; /* Warna background yang lebih cerah */
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.7); /* Tambahkan transparansi ke header */
+            background-color: #333; /* Warna header yang lebih gelap */
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -26,9 +22,9 @@
         }
 
         header h1 {
-            margin: 0; /* Hapus margin atas dan bawah untuk header h1 */
-            padding-bottom: 10px; /* Tambahkan padding bawah ke header h1 */
-            border-bottom: 1px solid #fff; /* Tambahkan garis bawah ke header h1 */
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #fff; /* Garis bawah header yang lebih tebal */
         }
 
         nav ul {
@@ -45,23 +41,18 @@
         nav ul li a {
             text-decoration: none;
             color: #fff;
-            padding: 5px 10px;
+            padding: 8px 15px; /* Padding menu yang lebih besar */
             border-radius: 3px;
             transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: #555;
-        }
-
-        main {
-            text-align: center;
-            margin-top: 20px;
+            background-color: #555; /* Warna latar belakang menu saat dihover */
         }
 
         section {
             margin-bottom: 40px;
-            background-color: rgba(255, 255, 255, 0.9); /* Tambahkan transparansi ke section */
+            background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -72,7 +63,7 @@
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.7); /* Tambahkan transparansi ke footer */
+            background-color: #333;
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -97,40 +88,25 @@
         img:hover {
             transform: scale(1.1);
         }
+
+        /* Animasi Header */
+        header h1 {
+            transition: transform 0.3s ease; /* Tambahkan animasi saat dihover */
+        }
+
+        header h1:hover {
+            transform: scale(1.05); /* Perbesar header saat dihover */
+        }
+
+        /* Animasi Artikel */
+        article {
+            transition: transform 0.3s ease; /* Tambahkan animasi saat dihover */
+        }
+
+        article:hover {
+            transform: translateY(-5px); /* Geser artikel ke atas saat dihover */
+        }
     </style>
-    <script>
-        // Fungsi untuk menambahkan animasi ke header
-        function animateHeader() {
-            var header = document.querySelector('header h1');
-            header.style.transition = 'opacity 0.3s ease';
-            header.addEventListener('mouseenter', function() {
-                this.style.opacity = '0.7';
-            });
-            header.addEventListener('mouseleave', function() {
-                this.style.opacity = '1';
-            });
-        }
-
-        // Fungsi untuk menambahkan animasi ke judul artikel di blog
-        function animateArticleTitles() {
-            var articleTitles = document.querySelectorAll('#blog article h3');
-            articleTitles.forEach(function(title) {
-                title.style.transition = 'opacity 0.3s ease';
-                title.addEventListener('mouseenter', function() {
-                    this.style.opacity = '0.7';
-                });
-                title.addEventListener('mouseleave', function() {
-                    this.style.opacity = '1';
-                });
-            });
-        }
-
-        // Panggil fungsi animasi setelah dokumen dimuat
-        document.addEventListener('DOMContentLoaded', function() {
-            animateHeader();
-            animateArticleTitles();
-        });
-    </script>
 </head>
 <body>
     <header>
