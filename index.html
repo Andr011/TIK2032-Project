@@ -6,15 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
     <style>
+        /* CSS Anda */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7; /* Warna background yang lebih cerah */
+            background-color: #f4f4f4;
+            background-image: url('background.jpg'); /* Ganti 'background.jpg' dengan nama dan path file gambar latar belakang Anda */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         header {
-            background-color: #333; /* Warna header yang lebih gelap */
+            background-color: rgba(0, 0, 0, 0.7); /* Tambahkan transparansi ke header */
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -22,9 +27,9 @@
         }
 
         header h1 {
-            margin: 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #fff; /* Garis bawah header yang lebih tebal */
+            margin: 0; /* Hapus margin atas dan bawah untuk header h1 */
+            padding-bottom: 10px; /* Tambahkan padding bawah ke header h1 */
+            border-bottom: 1px solid #fff; /* Tambahkan garis bawah ke header h1 */
         }
 
         nav ul {
@@ -41,18 +46,23 @@
         nav ul li a {
             text-decoration: none;
             color: #fff;
-            padding: 8px 15px; /* Padding menu yang lebih besar */
+            padding: 5px 10px;
             border-radius: 3px;
             transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: #555; /* Warna latar belakang menu saat dihover */
+            background-color: #555;
+        }
+
+        main {
+            text-align: center;
+            margin-top: 20px;
         }
 
         section {
             margin-bottom: 40px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9); /* Tambahkan transparansi ke section */
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -63,7 +73,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7); /* Tambahkan transparansi ke footer */
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -91,20 +101,20 @@
 
         /* Animasi Header */
         header h1 {
-            transition: transform 0.3s ease; /* Tambahkan animasi saat dihover */
+            transition: opacity 0.3s ease; /* Tambahkan animasi saat dihover */
         }
 
         header h1:hover {
-            transform: scale(1.05); /* Perbesar header saat dihover */
+            opacity: 0.7; /* Kurangi opacity saat dihover */
         }
 
         /* Animasi Artikel */
-        article {
-            transition: transform 0.3s ease; /* Tambahkan animasi saat dihover */
+        #blog article h3 {
+            transition: opacity 0.3s ease; /* Tambahkan animasi saat dihover */
         }
 
-        article:hover {
-            transform: translateY(-5px); /* Geser artikel ke atas saat dihover */
+        #blog article h3:hover {
+            opacity: 0.7; /* Kurangi opacity saat dihover */
         }
     </style>
 </head>
@@ -133,15 +143,15 @@
             <h2>Blog</h2>
             <article>
                 <h3>Teknologi: Perkembangan Terbaru dalam Dunia Teknologi</h3>
-                <p>Teknologi terus berkembang pesat dan memiliki dampak besar dalam kehidupan kita sehari-hari. Artikel ini membahas beberapa perkembangan terbaru dalam dunia teknologi, seperti kecerdasan buatan, kendaraan otonom, dan Internet of Things. Teknologi kecerdasan buatan (AI) telah menjadi bagian integral dari banyak aspek kehidupan kita. Dari asisten virtual hingga mobil otonom, AI terus memperluas pengaruhnya. Sementara itu, kendaraan otonom semakin mendekati kenyataan, dengan perusahaan-perusahaan besar seperti Tesla dan Google terus mengembangkan teknologi ini. Internet of Things (IoT) juga mengubah cara kita berinteraksi dengan dunia sekitar kita, dengan rumah pintar, kota pintar, dan perangkat lainnya yang terhubung secara online.</p>
+                <p>Teknologi terus berkembang pesat dan memiliki dampak besar dalam kehidupan kita sehari-hari. Artikel ini membahas beberapa perkembangan terbaru dalam dunia teknologi, seperti kecerdasan buatan, kendaraan otonom, dan Internet of Things.</p>
             </article>
             <article>
                 <h3>Sejarah Kemerdekaan Indonesia: Perjuangan Menuju Kemerdekaan</h3>
-                <p>Sejarah kemerdekaan Indonesia merupakan perjalanan panjang dan penuh perjuangan. Artikel ini mengupas tentang peristiwa-peristiwa penting dalam perjuangan menuju kemerdekaan Indonesia, termasuk proklamasi kemerdekaan pada tanggal 17 Agustus 1945. Perjuangan kemerdekaan Indonesia tidaklah mudah. Dari penjajahan Belanda yang panjang hingga perjuangan para pahlawan nasional seperti Soekarno dan Hatta, setiap langkah menuju kemerdekaan dipenuhi dengan pengorbanan dan perjuangan. Artikel ini menghormati dan mengenang perjuangan para pahlawan yang telah berjuang keras untuk memperoleh kemerdekaan bagi bangsa Indonesia.</p>
+                <p>Sejarah kemerdekaan Indonesia merupakan perjalanan panjang dan penuh perjuangan. Artikel ini mengupas tentang peristiwa-peristiwa penting dalam perjuangan menuju kemerdekaan Indonesia, termasuk proklamasi kemerdekaan pada tanggal 17 Agustus 1945.</p>
             </article>
             <article>
                 <h3>Musik: Pengaruh Musik dalam Kehidupan Manusia</h3>
-                <p>Musik memiliki peran yang penting dalam kehidupan manusia. Artikel ini membahas tentang pengaruh musik dalam berbagai aspek kehidupan, mulai dari pengaruhnya terhadap suasana hati hingga peran musik dalam industri hiburan. Musik telah dikenal memiliki kekuatan untuk mempengaruhi suasana hati dan emosi. Dari musik klasik yang menenangkan hingga musik rock yang energik, setiap genre memiliki dampaknya sendiri pada pendengarnya. Selain itu, musik juga memainkan peran penting dalam industri hiburan, dengan konser, festival musik, dan penjualan rekaman yang menjadi bagian integral dari budaya populer.</p>
+                <p>Musik memiliki peran yang penting dalam kehidupan manusia. Artikel ini membahas tentang pengaruh musik dalam berbagai aspek kehidupan, mulai dari pengaruhnya terhadap suasana hati hingga peran musik dalam industri hiburan.</p>
             </article>
         </section>
 
